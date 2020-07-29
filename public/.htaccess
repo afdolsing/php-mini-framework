@@ -1,0 +1,9 @@
+Options -Multiviews
+RewriteEngine On
+
+RewriteBase /github/php-mini-framework/public
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php?url=$1 [L]
